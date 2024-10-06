@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Kheri Fort Resort</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Kheri Fort Resort</h1>
+    </header>
+
+    <nav class="sidebar">
+        <img src="logo.png" alt="Kheri Fort Resort Logo" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">About Us</a></li>
+            <li><a href="room.html">Rooms</a></li>
+            <li><a href="ameneties'.html">Amenities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contact-section">
+            <h2>Get in Touch with Us</h2>
+            <p class="intro">We’re here to assist you with any questions or feedback. Reach out to us anytime!</p>
+
+            <div class="contact-info">
+                <h3>Email Us:</h3>
+                <p>Email: <a href="mailto:thekherifort@gmail.com">thekherifort@gmail.com</a></p>
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="map-container">
+                <h3>Find Us Here</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19890.832734746334!2d75.67529526053525!3d27.047478704983123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c27b49f5c8d2b%3A0xb6b63e27e7e249d7!2sKheri%20Fort!5e0!3m2!1sen!2sin!4v1640909311515!5m2!1sen!2sin" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"></iframe>
+                <p><a href="https://www.google.com/maps/place/Kheri+Fort" target="_blank" class="map-link">View on Google Maps</a></p>
+            </div>
+
+            <div class="review-section">
+                <h3>Share Your Experience</h3>
+                <p>We value your feedback! Please leave a review below.</p>
+                <form id="reviewForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <textarea id="review" placeholder="Your Review" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+                <button class="book-now" onclick="window.location.href='book.html'">Book Now</button> <!-- Book Now button -->
+                <div id="thankYouMessage" class="hidden">Thank you for your review!</div>
+                <div id="reviewsDisplay" class="reviews-display">
+                    <h4>Customer Reviews:</h4>
+                    <ul id="reviewsList"></ul>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FortinRajasthann/posts/kheri-fort-35-km-from-jaipur-near-jobner-is-more-then-300-years-oldkherifort-her/931899907576207/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/kherifort?igsh=OWd2OHBwbzBzbnIz" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>&copy; 2024 Kheri Fort Resort. All rights reserved.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kheri Fort Resort. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const loadReviews = () => {
+            const reviewsList = document.getElementById('reviewsList');
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.forEach(review => {
+                const newReview = document.createElement('li');
+                newReview.textContent = `${review.name}: ${review.text}`;
+                reviewsList.appendChild(newReview);
+            });
+        };
+
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const name = document.getElementById('name').value;
+            const review = document.getElementById('review').value;
+
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.push({ name, text: review });
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+
+            const reviewsList = document.getElementById('reviewsList');
+            const newReview = document.createElement('li');
+            newReview.textContent = `${name}: ${review}`;
+            reviewsList.appendChild(newReview);
+
+            document.getElementById('thankYouMessage').classList.remove('hidden');
+            document.getElementById('reviewForm').reset();
+        });
+
+        window.onload = loadReviews;
+    </script>
+</body>
+</html>

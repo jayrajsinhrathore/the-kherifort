@@ -1,0 +1,197 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(164, 0, 0, 0.8); /* Add some transparency */
+    color: white;
+    padding: 20px;
+    text-align: center; /* Center the header text */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed; /* Fix the sidebar */
+    top: 0;
+    left: 0;
+    width: 220px; /* Adjust width as needed */
+    height: 100%; /* Full height */
+    background-color: #A40000; /* Royal Red */
+    padding-top: 20px; /* Space for logo */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    display: block;
+    margin: 0 auto 20px; /* Center logo and add space below */
+    width: 80%; /* Adjust size as needed */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0; /* Increased space between menu items */
+    text-align: center; /* Center text in each menu item */
+}
+
+.sidebar ul li a {
+    color: white; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px; /* Increased padding for better spacing */
+    display: block; /* Makes the entire area clickable */
+    font-family: 'Cursive', sans-serif; /* Cursive font */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.sidebar ul li a:hover {
+    background-color: #d8c999; /* Light hover effect */
+    color: #A40000; /* Change text color on hover */
+}
+
+/* Main content */
+main {
+    margin-left: 260px; /* Increased margin for wider sidebar */
+    padding: 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url("mainbgbg.jfif");
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* White text for hero section */
+    position: relative;
+    border-bottom: 5px solid #d8c999;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: url("") no-repeat center center; /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font for headings */
+    color: #A40000; /* Royal Red */
+}
+
+/* Background for sections */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(240, 240, 240, 0.9); /* Light grey background with transparency */
+    padding: 20px; /* Padding around sections */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.about-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.about-item img {
+    width: 50%; /* Set image to take half the width */
+    height: 300px; /* Fixed height for consistent appearance */
+    object-fit: cover; /* Crop image if needed */
+    border-radius: 10px;
+    margin: 0 20px; /* Space around images */
+}
+
+.text {
+    width: 50%; /* Text width */
+    text-align: left; /* Align text to the left */
+}
+
+.text h3 {
+    color: #5a4d28; /* Darker color for subheadings */
+    margin-bottom: 10px; /* Space below subheadings */
+}
+
+.text p {
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #A40000; /* Royal Red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width for sidebar on mobile */
+        height: auto; /* Allow sidebar to adjust height */
+        position: relative; /* Change position */
+        padding-top: 10px; /* Adjust padding */
+    }
+
+    .sidebar .logo {
+        width: 80px; /* Adjust logo size */
+        height: 80px; /* Adjust logo size */
+    }
+
+    main {
+        margin-left: 0; /* No margin on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .about-item {
+        flex-direction: column; /* Stack items on small screens */
+        align-items: center; /* Center items */
+        width: 100%; /* Full width for each item */
+    }
+
+    .about-item img {
+        width: 100%; /* Full width for images on mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 0 10px 0; /* Space below image */
+    }
+
+    .text {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+    }
+}

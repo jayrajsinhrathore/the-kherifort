@@ -1,0 +1,199 @@
+/* CSS Reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  /* Header Styles */
+  header {
+      background-color: #A40000; /* Royal Red */
+      color: white; /* White text */
+      padding: 20px;
+      text-align: center;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+      position: fixed; /* Fix the sidebar */
+      top: 0;
+      left: 0;
+      width: 220px; /* Adjust width as needed */
+      height: 100%; /* Full height */
+      background-color: #A40000; /* Royal Red */
+      padding-top: 20px; /* Space for logo */
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar .logo {
+      display: block;
+      margin: 0 auto 20px; /* Center logo and add space below */
+      width: 80%; /* Adjust size as needed */
+  }
+  
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .sidebar ul li {
+      margin: 20px 0; /* Increased space between menu items */
+      text-align: center; /* Center text in each menu item */
+  }
+  
+  .sidebar ul li a {
+      color: white; /* White text for links */
+      text-decoration: none;
+      font-weight: bold;
+      padding: 15px; /* Increased padding for better spacing */
+      display: block; /* Makes the entire area clickable */
+  }
+  
+  /* Main content */
+  main {
+      margin-left: 240px; /* Space for sidebar */
+      padding: 20px; /* Add some padding */
+      padding-bottom: 80px; /* Ensure space for footer */
+  }
+  
+  /* Contact Section Styles */
+  .contact-section {
+      background-color: white; /* White background for contrast */
+      padding: 20px;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      text-align: center; /* Center text */
+      max-width: 800px; /* Limit max width */
+      margin: 20px auto; /* Center on larger screens */
+  }
+  
+  .contact-section h2 {
+      margin-bottom: 20px;
+      color: #A40000; /* Royal Red */
+  }
+  
+  .intro {
+      margin-bottom: 20px;
+  }
+  
+  /* Map Container Styles */
+  .map-container {
+      margin: 20px 0;
+  }
+  
+  /* Review Section Styles */
+  .review-section {
+      margin-top: 30px;
+  }
+  
+  .review-section form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+  }
+  
+  .review-section input, 
+  .review-section textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc; /* Light border */
+      border-radius: 5px; /* Rounded corners */
+  }
+  
+  .review-section button {
+      background-color: #A40000; /* Royal Red */
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px; /* Rounded corners */
+      transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .review-section button:hover {
+      background-color: #d8c999; /* Hover effect */
+  }
+  
+  /* Book Now Button Styles */
+  .review-section .book-now {
+      background-color: #A40000; /* Royal Red */
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px; /* Rounded corners */
+      transition: background-color 0.3s; /* Smooth transition */
+      margin-top: 10px; /* Space above the button */
+  }
+  
+  .review-section .book-now:hover {
+      background-color: #d8c999; /* Hover effect */
+  }
+  
+  .reviews-display {
+      text-align: left; /* Align reviews left */
+  }
+  
+  .reviews-display ul {
+      list-style-type: none; /* Remove bullets */
+      padding: 0;
+  }
+  
+  /* Social Links Styles */
+  .social-links {
+      margin-top: 20px;
+  }
+  
+  .social-links a {
+      margin: 0 10px;
+      font-size: 24px; /* Icon size */
+      color: #A40000; /* Match with theme */
+      transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+      color: #d8c999; /* Hover effect */
+  }
+  
+  /* Footer Styles */
+  footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #A40000; /* Royal Red */
+      color: white; /* White text */
+      position: relative;
+      bottom: 0;
+      width: 100%;
+  }
+  
+  /* Hidden class for thank you message */
+  .hidden {
+      display: none;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+      .sidebar {
+          width: 100%; /* Full width for sidebar on mobile */
+          height: auto; /* Allow sidebar to adjust height */
+          position: relative; /* Change position */
+          padding-top: 10px; /* Adjust padding */
+      }
+  
+      .logo {
+          width: 80px; /* Adjust logo size */
+      }
+  
+      main {
+          margin-left: 0; /* No margin on mobile */
+          padding: 10px; /* Adjust padding */
+      }
+  }
+  

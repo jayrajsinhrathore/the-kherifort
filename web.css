@@ -1,0 +1,235 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: white; /* White background */
+}
+
+/* Header Styles */
+header {
+    background-color: #A40000; /* Royal Red */
+    color: white; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed; /* Fix the sidebar */
+    top: 0;
+    left: 0;
+    width: 220px; /* Adjust width as needed */
+    height: 100%; /* Full height */
+    background-color: #A40000; /* Royal Red */
+    padding-top: 20px; /* Space for logo */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    display: block;
+    margin: 0 auto 20px; /* Center logo and add space below */
+    width: 80%; /* Adjust size as needed */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0; /* Increased space between menu items */
+    text-align: center; /* Center text in each menu item */
+}
+
+.sidebar ul li a {
+    color: white; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px; /* Increased padding for better spacing */
+    display: block; /* Makes the entire area clickable */
+    font-family: 'Cursive', sans-serif; /* Cursive font */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.sidebar ul li a:hover {
+    background-color: #d8c999; /* Light hover effect */
+    color: #A40000; /* Change text color on hover */
+}
+
+/* Main content */
+main {
+    margin-left: 240px; /* Space for sidebar */
+    padding: 20px; /* Add some padding */
+    padding-bottom: 80px; /* Ensure space for footer */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url("mainbgbg.jfif");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* White text for hero section */
+    position: relative;
+    border-bottom: 5px solid #d8c999;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Gallery Styles */
+.gallery {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.gallery h3 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #A40000; /* Royal Red for title */
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: calc(30% - 20px);
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height */
+    object-fit: contain; /* Ensure images are fully visible */
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Features Section Styles */
+.features {
+    padding: 40px;
+    text-align: center;
+}
+
+.features h3 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #5a4d28;
+}
+
+.feature {
+    display: inline-block;
+    width: calc(30% - 30px);
+    margin: 15px;
+    border: 2px solid #d8c999;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height */
+    border-radius: 10px 10px 0 0;
+}
+
+/* Amenities Section Styles */
+.amenities {
+    padding: 40px;
+    text-align: center;
+}
+
+.amenities h3 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #A40000; /* Royal Red for title */
+}
+
+.amenities-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.amenity {
+    width: calc(25% - 30px);
+    margin: 15px;
+    text-align: center;
+}
+
+.amenity img {
+    width: 60px; /* Set a fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #A40000; /* Royal Red */
+    color: white; /* White text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width for sidebar on mobile */
+        height: auto; /* Allow sidebar to adjust height */
+        position: relative; /* Change position */
+        padding-top: 10px; /* Adjust padding */
+    }
+
+    .logo {
+        width: 80px; /* Adjust logo size */
+    }
+
+    main {
+        margin-left: 0; /* No margin on mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .feature {
+        width: calc(100% - 30px); /* Full width for features on mobile */
+    }
+
+    .amenities-list {
+        flex-direction: column; /* Stack amenities on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .amenity {
+        width: 80%; /* Full width for each amenity on mobile */
+        margin: 10px 0; /* Space between amenities */
+    }
+
+    .gallery-images img {
+        width: calc(90% - 20px); /* Make images wider on mobile */
+    }
+}
